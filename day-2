@@ -1,0 +1,33 @@
+# 1. Print Statement (Screen par kuch dikhane ke liye)
+print("Assalam-o-Alaikum! Python mein khush amdeed.")
+
+# 2. Variables aur Data Types (Information store karne ke liye)
+naam = "Sania"          # String (Text)
+umar = 21               # Integer (Number)
+cgpa = 3.85             # Float (Ashariya wala number)
+is_student = True       # Boolean (True ya False)
+
+print("Naam:", naam)
+print("Umar:", umar)
+
+# 3. List (Ek se zyada cheezein store karne ke liye)
+skills = ["Python", "Linux", "Docker", "DevOps"]
+print("Meri Skills:", skills)
+
+# 4. If-Else Condition (Faisla karne ke liye)
+if cgpa >= 3.5:
+    print("Result: Bohat acha CGPA hai!")
+else:
+    print("Result: Mazeed mehnat ki zaroorat hai.")
+
+# 5. For Loop (Kisi kaam ko bar bar dohrane ke liye)
+print("\nDevOps Seekhne ke Steps:")
+for skill in skills:
+    print("- Seekhna hai:", skill)
+
+# 6. Function (Apna khud ka tool/command banana)
+def welcome_message(user_name):
+    return f"Best of luck {user_name}, aap zaroor kamyab hongi!"
+
+message = welcome_message(naam)
+print("\n" + message)
