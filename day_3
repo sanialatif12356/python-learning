@@ -1,0 +1,17 @@
+# 1. Creating variables with different data types
+name = "Ali"          # String (text)
+age = 22              # Integer (whole number)
+height = 5.9          # Float (decimal number)
+is_student = True     # Boolean (True or False)
+
+# 2. Printing the variables
+print("Name:", name)
+print("Age:", age)
+
+# 3. Updating a variable's value
+age = 23
+print("Updated Age:", age)
+
+# 4. Using variables in math
+next_year_age = age + 1
+print("Age next year:", next_year_age)
