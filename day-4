@@ -1,0 +1,48 @@
+tasks = []
+
+def show_menu():
+    print("\n--- TO-DO LIST MENU ---")
+    print("1. Naya kaam add karein")
+    print("2. Saare kaam dekhein")
+    print("3. Kisi kaam ko delete karein")
+    print("4. Program band karein")
+
+while True:
+    show_menu()
+    choice = input("\nApni pasand ka number likhein (1-4): ")
+
+    if choice == '1':
+        task = input("Kaam likhein: ")
+        tasks.append(task)
+        print(f"'{task}' list mein shamil ho gaya hai!")
+
+    elif choice == '2':
+        if not tasks:
+            print("\nAapki list abhi khali hai.")
+        else:
+            print("\nAapke kaam:")
+            for index, task in enumerate(tasks, start=1):
+                print(f"{index}. {task}")
+
+    elif choice == '3':
+        if not tasks:
+            print("\nDelete karne ke liye koi kaam nahi hai.")
+        else:
+            for index, task in enumerate(tasks, start=1):
+                print(f"{index}. {task}")
+            try:
+                task_num = int(input("Kaunsa number delete karna hai? "))
+                if 1 <= task_num <= len(tasks):
+                    removed = tasks.pop(task_num - 1)
+                    print(f"'{removed}' delete kar diya gaya hai.")
+                else:
+                    print("Ghalat number likha hai.")
+            except ValueError:
+                print("Meherbani karke sirf number likhein.")
+
+    elif choice == '4':
+        print("Program band ho raha hai. Khuda Hafiz!")
+        break
+
+    else:
+        print("Ghalat option! 1 se 4 ke darmiyan number chunein.")
